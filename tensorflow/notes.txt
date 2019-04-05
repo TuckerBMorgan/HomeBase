@@ -1,0 +1,8 @@
+Posining seems to work!!!!!!
+
+This is STRANGE
+SO SO SO STRANGE
+because WHY
+WHY should it work
+the enture network is responding the a SINGLE value
+in the first layer alone that working off of just 1 / (28 * 28) of the information

@@ -1,0 +1,45 @@
+ function Get-WebPageImages
+{
+<#
+.CREATED BY:
+    Matt Kerfoot
+.CREATED ON:
+    08/11/2014
+.Synopsis
+   Downloads all available images from the specified $URL (A mandatory Variable)
+.DESCRIPTION
+   This funciton will download all images from a specific web page and save them to your desktop by default.
+   Requires PSv3+
+.EXAMPLE
+   PS C:\> Get-WebPageImages -Url http://www.matthewkerfoot.com -outputpath c:\
+#>
+                                  [CmdletBinding()]
+                          Param ( [Parameter(Mandatory=$false,
+                                  ValueFromPipelineByPropertyName=$true,
+                                  Position=0)]
+                                  $Url = "https://archives.bulbagarden.net/wiki/Category:Red_and_Blue_sprites",
+                                  $OutputPath = "$env:USERPROFILE\Desktop\"
+                          )
+
+                 Begin {
+        
+                            $iwr = Invoke-WebRequest -Uri $Url
+                            $images = ($iwr).Images | select src
+
+                 }
+
+       Process {
+
+                    $wc = New-Object System.Net.WebClient
+                    $images | foreach { $wc.DownloadFile( $_.src, ("$OutputPath\"+[io.path]::GetFileName($_.src) ) ) }
+       }
+
+ End {
+
+              Write-Host "Downloading all images from $Url to $OutputPath"
+
+ }
+
+}
+
+Get-WebPageImages

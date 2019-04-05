@@ -1,0 +1,25 @@
+Three lanes
+All are the same
+Clearly has defined stages like all card games
+
+    Rez any heroes that can and  let the player choose where they go
+    Add two random creeps to two random lanes
+    Draw cards at top of round
+        Refreash Mana between lanes
+        then improvments trigger
+        Players take actions one after another
+        May play cards in any of the three rounds at a time
+        Preforming any action(playing cards) passes the cards over to the next person
+        If both players "pass" then all cards fight
+        goto: Card to Card Battle
+    End of round goto shopping phase
+
+Card to Card Battle:
+    All cards in a lane attack the card across from each other(this is not fully true, "bend cards exsist")
+    Cards to damage to each other when they fight
+    If a cards health is below zero at the end of that they die, granting the other person gold
+    Damage not blocked by a character is taken by the tower
+
+Tower Rules
+    Health Starts at 40, if it drops below 0 prevent all other damage taken that turn and increased health to 80
+

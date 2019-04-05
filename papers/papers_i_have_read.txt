@@ -1,0 +1,13 @@
+
+
+have read:
+https://arxiv.org/pdf/1711.11279.pdf
+https://arxiv.org/pdf/1801.02774.pdf
+https://arxiv.org/pdf/1611.04558.pdf
+
+
+need to read:
+https://arxiv.org/pdf/1805.01772.pdf
+https://arxiv.org/pdf/1412.6572.pdf
+https://arxiv.org/pdf/1805.01772.pdf
+http://idl.cs.washington.edu/files/2018-TensorFlowGraph-VAST.pdf
